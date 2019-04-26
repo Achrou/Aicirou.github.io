@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">安利一个使用Java开发的爬虫项目 | MoMik</title>
+  <title itemprop="name">POI导出服务设计 | MoMik</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -388,30 +388,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://acg.toubiec.cn/random);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://acg.toubiec.cn/random">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      安利一个使用Java开发的爬虫项目</h1>
-      <p class="entry-census">
-        <span>
-          <a href>
-            <img src="https://cdn.jsdelivr.net/gh/jsonpop/jsonpop.github.io@1.0.2/images/author.gif">
-          </a>
-        </span>
-        <span>
-          <a href>MoMik</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2019-4-26<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-    </header>
-  </div>
-
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -419,74 +395,31 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
+          <header class="entry-header">
+            <h1 class="entry-title">POI导出服务设计</h1>
+            <p class="entry-census">MoMik&nbsp;·&nbsp;2019-4-26&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p><p></p>
+
+            <hr>
+          </header>
+        
         <div class="entry-content">
-          <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>这个项目是用来负责汇集目标站点信息，便于大家查看、订阅（主要用来采“碍事碍事R”）<br>大致看了下代码写的还不错可以用来当做学习项目参考。<br>具体代码实现等我有空写个解析篇吧</p>
-<h3 id="ShadowSocks-Share"><a href="#ShadowSocks-Share" class="headerlink" title="ShadowSocks-Share"></a>ShadowSocks-Share</h3><p>示例站点：<a href="https://shadowsocks-share.herokuapp.com" target="_blank" rel="noopener">https://shadowsocks-share.herokuapp.com</a><br>站点是用herok做的托管有流量限制不保证一定能访问</p>
-<h3 id="工作流程如下"><a href="#工作流程如下" class="headerlink" title="工作流程如下"></a>工作流程如下</h3><ol>
-<li>项目启动后扫描一次目标站点信息</li>
-<li>信息保存至数据库</li>
-<li>前台展示、订阅信息</li>
-<li>定时扫描目标站点并更新数据<a href="#收集信息网站列表如下">（扫描间隔如下）</a></li>
-<li>每小时检测所有账号可用性，并更新账号状态</li>
+          <h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>先让我吐槽3分钟…<br>今天项目经理给我建了一个JIRA”参考其他功能代码编写某某功能的PPT导出” 额 看标题还算比较正经算是码农日常。于是我找到了之前的代码。第一眼给我的感觉就是“这TM是人写的代码？？？” 最基本的封装也只是针对单个业务，也就是说我想写个导出还要把处理导出部分[通用]代码再写一遍，而且代码层次混乱并不利于新进人员快速上手。长叹一声便开始重构这部分导出代码【强迫症】</p>
+<h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><p>首先业务场景是一家做的样衣外贸公司，PPT主要针对样衣资料进行展示发送给客户参考。<br>但是客户并不只有一家，每家给的模版是不相同的也就是说你需要填充的字段会不同。首先一个服务全部搞定不太现实【一个服务就意味着你全部客户代码全部耦合在一起】，这就需要我们将模版服务插件化：</p>
+<ol>
+<li>通用数据服务提供</li>
+<li>通用业务处理</li>
+<li>规范化导出接口</li>
+<li>插件化模版导出业务处理</li>
+<li>服务分发</li>
 </ol>
-<h3 id="收集信息网站列表如下"><a href="#收集信息网站列表如下" class="headerlink" title="收集信息网站列表如下"></a>收集信息网站列表如下</h3><table>
-<thead>
-<tr>
-<th>地址</th>
-<th>启动时扫描</th>
-<th>扫描间隔</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://global.ishadowx.net/" target="_blank" rel="noopener">https://global.ishadowx.net/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 3 小时</td>
-</tr>
-<tr>
-<td><a href="https://doub.io/sszhfx/" target="_blank" rel="noopener">https://doub.io/sszhfx/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 6 小时</td>
-</tr>
-<tr>
-<td><a href="https://freess.cx/" target="_blank" rel="noopener">https://freess.cx/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 12 小时</td>
-</tr>
-<tr>
-<td><a href="https://en.ss8.fun/" target="_blank" rel="noopener">https://en.ss8.fun/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 4 小时</td>
-</tr>
-<tr>
-<td><a href="https://freessr.win/" target="_blank" rel="noopener">https://freessr.win/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 6 小时</td>
-</tr>
-<tr>
-<td><a href="https://free-ss.site/" target="_blank" rel="noopener">https://free-ss.site/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 3 小时</td>
-</tr>
-<tr>
-<td><a href="https://www.52ssr.cn/" target="_blank" rel="noopener">https://www.52ssr.cn/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 3 小时</td>
-</tr>
-<tr>
-<td><a href="https://free.yitianjianss.com/" target="_blank" rel="noopener">https://free.yitianjianss.com/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 3 小时</td>
-</tr>
-<tr>
-<td><a href="https://cloudfra.com/" target="_blank" rel="noopener">https://cloudfra.com/</a></td>
-<td>是</td>
-<td>从 0 点 10 分开始，每 3 小时</td>
-</tr>
-</tbody>
-</table>
-<p>接下来作者还准备支持这些站点：<a href="https://github.com/max2max/freess/wiki/%E5%85%8D%E8%B4%B9ss%E8%B4%A6%E5%8F%B7" target="_blank" rel="noopener">https://github.com/max2max/freess/wiki/%E5%85%8D%E8%B4%B9ss%E8%B4%A6%E5%8F%B7</a></p>
-<h3 id="项目Fork"><a href="#项目Fork" class="headerlink" title="项目Fork"></a>项目Fork</h3><p>项目github仓库<a href="https://github.com/zc-zh-001/ShadowSocks-Share" target="_blank" rel="noopener">点这里</a></p>
+<h4 id="通用数据服务提供"><a href="#通用数据服务提供" class="headerlink" title="通用数据服务提供"></a>通用数据服务提供</h4><p>这部分主要是用来提供通用的数据，说白了就是某些字段会经常出现在很多模版里，又或者如查询产品图片等这些常用数据。目的就是不做重复的查询。</p>
+<h4 id="通用数据服务提供-1"><a href="#通用数据服务提供-1" class="headerlink" title="通用数据服务提供"></a>通用数据服务提供</h4><p>用来处理你在“通用数据服务提供”查询到的数据，因为我们查询到的原始数据并不足以应对页面上的要求，需要我们进行特殊处理。</p>
+<h4 id="规范化导出接口"><a href="#规范化导出接口" class="headerlink" title="规范化导出接口"></a>规范化导出接口</h4><p>将导出服务抽象化为一个接口,所有插件（即不同模版导出服务）必须实现该接口。<br>之所以规范化导出接口首先是为了我们能够使用“服务分发”功能，其次是为了代码的整洁性【不要张三起这个方法名李四起那个方法名】</p>
+<h4 id="插件化模版导出业务处理"><a href="#插件化模版导出业务处理" class="headerlink" title="插件化模版导出业务处理"></a>插件化模版导出业务处理</h4><p>针对不同模版提供不同的业务处理，可插拔式封装，一个模版对应一个插件，增加模版即增加插件。</p>
+<h4 id="服务分发"><a href="#服务分发" class="headerlink" title="服务分发"></a>服务分发</h4><p>导出请求发送到后台后，根据需要导出模版的类型启动对应该模版的插件（本文导出服务我们统一叫做插件）<br>和分布式应用的服务网关理念相同。</p>
+<blockquote>
+<p>这里我们利用了Spring对Bean管理的特性，插件是一个被Spring管理的Bean当我们需要这个插件的时候,通过名称从Spring上下文中取出该插件</p>
+</blockquote>
 
         </div>
         <!-- .entry-content -->
@@ -517,15 +450,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2019/04/26/POI导出服务设计/" rel="prev">
+            <a href="/2019/04/26/SpringBoot集成Netty实现百万级的消息推送系统/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://images.jsonpop.cn/UQ47Hg.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                POI导出服务设计</h3>
+                SpringBoot集成Netty实现百万级的消息推送系统</h3>
                 <hr>
               </div>
             </a>
@@ -535,15 +468,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2019/04/26/MyBatis 通用 Mapper详解/" rel="next">
+            <a href="/2019/04/26/安利一个使用Java开发的爬虫项目/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g7d2h9hwj30hx06mjsf.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://acg.toubiec.cn/random" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                MyBatis 通用 Mapper详解</h3>
+                安利一个使用Java开发的爬虫项目</h3>
                 <hr>
               </div>
             </a>
