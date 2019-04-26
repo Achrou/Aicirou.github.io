@@ -1160,6 +1160,10 @@ $(document).ready(function() {
 </div>
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
 <script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    theme: '#b7daff'
+  });
   $(function(){
     $('body').on('click', '.aplayer', function(){
       if($('.aplayer-button').hasClass('aplayer-play')) {
