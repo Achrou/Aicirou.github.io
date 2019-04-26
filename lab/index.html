@@ -772,23 +772,23 @@ $(document).ready(function() {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
 <style>
-  /*.aplayer .aplayer-lrc {
+  .aplayer .aplayer-lrc {
     height: 35px;
   }
   .aplayer .aplayer-lrc p{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    line-height: 18px !important;
+    line-height: 16px !important;
   }
   .aplayer .aplayer-lrc p.aplayer-lrc-current{
-    color: #FF1493;
+    color: orange;
   }
   .aplayer.aplayer-narrow .aplayer-body{
     left: -66px !important;
   }
   .aplayer.aplayer-fixed .aplayer-lrc {
     display: none;
-  }*/
+  }
   .lrc-show {
     display: block !important;
   }
@@ -797,11 +797,6 @@ $(document).ready(function() {
 </div>
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
 <script>
-  const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    theme: '#b7daff',
-    mini: true,
-  });
   $(function(){
     $('body').on('click', '.aplayer', function(){
       if($('.aplayer-button').hasClass('aplayer-play')) {
