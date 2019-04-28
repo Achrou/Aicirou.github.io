@@ -33,8 +33,8 @@
   mashiro_option.email_name = "";
   mashiro_option.cookie_version_control = "";
   mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "BUGMoMik";
-  mashiro_option.author_name = "MoMik";
+  mashiro_option.site_name = "BUGMoMik's Blog";
+  mashiro_option.author_name = "MoMik's Blog";
   mashiro_option.site_url = "https://jsonpop.github.io";
   mashiro_option.v_appId = "6OUHQNTjB1h36BfMiie93Vn4-gzGzoHsz";
   mashiro_option.v_appKey = "qLkPwvqNJJAyARozPBATyHpg";
@@ -169,7 +169,7 @@
         <span class="logolink moe-mashiro">
           <a href="/">
             <span class="sakurasono">BUG</span>
-            <span class="shironeko">MoMik</span>
+            <span class="shironeko">MoMik&#39;s Blog</span>
           </a>
         </span>
       </span>
@@ -1190,8 +1190,8 @@ lombok.equalsAndHashCode.callSuper=call
 <article class="post post-list-thumb" itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2019/04/26/安装Vue教程/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g628veuqj30b40b4dfn.jpg">
+    <a href="/2019/04/26/Ubuntu 16.04 升级Python3.x/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx3.sinaimg.cn/large/0069lHOigy1g2g7m5li9qj318g0nudia.jpg">
     </a>
   </div>
   <div class="post-content-wrap">
@@ -1199,8 +1199,8 @@ lombok.equalsAndHashCode.callSuper=call
       <div class="post-date">
         <i class="iconfont icon-time">
         </i>2019-4-26 17:04</div>
-      <a href="/2019/04/26/安装Vue教程/" class="post-title">
-        <h3>安装Vue教程</h3>
+      <a href="/2019/04/26/Ubuntu 16.04 升级Python3.x/" class="post-title">
+        <h3>Ubuntu 16.04 升级Python3.x</h3>
       </a>
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
@@ -1214,33 +1214,39 @@ lombok.equalsAndHashCode.callSuper=call
         </span>
       </div>
       <div class="float-content">
-        <!--<p><p>安装VUE之前需要先安装NODE.JS<br>按照下面的顺序执行即可初始化启动一个基本VUE项目</p>
-<pre><code class="shell">// 安装node.js，内含npm，Node.js官网：https://nodejs.org/en/ 。
+        <!--<p><h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>有个项目需要Python3.5<br>我的服务器系统是Ubuntu 16.04 内置Python2.7版本有点低需要升级至3.x</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>1.首先在ubuntu的终端ternimal输入命令：</p>
+<pre><code class="shell">sudo apt-get install python3
+</code></pre>
+<p>博主选择的是安装python3.5,命令为：sudo apt-get install python3.5<br>输入你的密码后会下载，刚才下载的Python程序被安装在usr/localb/python3.5 中。</p>
+<p>2.指定默认打开的是python3.5版本（你新安装的python版本）。<br>安装完成之后，你在终端中输入python，输出的信息里面会提示是2.7版本的，也就是说默认打开的并不是刚才安装好的3.5，所以还需要我们重新修改一下链接。方法如下：</p>
+<blockquote>
+<p>第一步：先备份原来的链接（在对系统执行删除之前进行备份是个好的习惯）。在ternimal下输入命令：</p>
+</blockquote>
+<pre><code class="shell">sudo cp /usr/bin/python /usr/bin/python_bak
 
-// 设置npm镜像cnpm命令行工具
-npm install -g cnpm --registry=https://registry.npm.taobao.org 
+</code></pre>
+<blockquote>
+<p>第二步：删除原来默认指向python2.7版本的链接。在ternimal下输入命令：</p>
+</blockquote>
+<pre><code class="shell">sudo rm /usr/bin/python
 
-// 全局安装 vue-cli
-cnpm install -g vue-cli
+</code></pre>
+<blockquote>
+<p>第三步：重新指定新的链接给python3.5版本。输入命令：</p>
+</blockquote>
+<pre><code class="shell">sudo ln -s /usr/bin/python3.5 /usr/bin/python
 
-// 先创建并进入vue项目目录
-cd W:\Workspaces\git_repositories\javalsj-blog-vue
-
-// 创建一个基于 webpack 模板的新项目
-vue init webpack javalsj-blog-vue
-
-// 先进入vue项目目录下再安装该项目的依赖
-cd W:\Workspaces\git_repositories\javalsj-blog-vue\javalsj-blog-vue
-
-// 初始化安装项目
-cnpm install
-
-// 运行项目
-npm run dev
+</code></pre>
+<blockquote>
+<p>另：python2.7和3.5版本之间随意切换（这里3.5切换回2.7版本）：</p>
+</blockquote>
+<pre><code class="shell">sudo rm /usr/bin/python
+sudo ln -s /usr/bin/python2.7 /usr/bin/python
 </code></pre>
 </p>-->
         <div class="post-bottom">
-          <a href="/2019/04/26/安装Vue教程/" class="button-normal">
+          <a href="/2019/04/26/Ubuntu 16.04 升级Python3.x/" class="button-normal">
             <i class="iconfont icon-caidan"></i>
           </a>
         </div>
@@ -1462,7 +1468,7 @@ $(document).ready(function() {
   <div class="m-avatar">
     <img src="https://cdn.jsdelivr.net/gh/jsonpop/jsonpop.github.io@1.0.2/images/author.gif">
   </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">BUGMoMik</p>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">BUGMoMik's Blog</p>
   <p style="text-align: center; word-spacing: 20px;">
     
       
