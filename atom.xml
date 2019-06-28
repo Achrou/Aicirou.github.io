@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-04-28T06:10:42.540Z</updated>
+  <updated>2019-06-26T05:28:12.816Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jvm学习笔记(一)</title>
+    <link href="/2019/06/26/jvm/jvm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>/2019/06/26/jvm/jvm学习笔记（一）/</id>
+    <published>2019-06-26T05:14:16.000Z</published>
+    <updated>2019-06-26T05:28:12.816Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;相关术语单词&quot;&gt;&lt;a href=&quot;#相关术语单词&quot; class=&quot;headerlink&quot; title=&quot;相关术语单词&quot;&gt;&lt;/a&gt;相关术语单词&lt;/h3&gt;&lt;p&gt;Deployment Technologles 部署技术&lt;/p&gt;
+&lt;p&gt;User Interface
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Netty学习一</title>
+    <link href="/2019/06/06/netty/Netty%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
+    <id>/2019/06/06/netty/Netty学习一/</id>
+    <published>2019-06-06T06:40:16.000Z</published>
+    <updated>2019-06-06T07:24:52.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Channel &lt;/p&gt;
+&lt;p&gt;1、线程安全&lt;/p&gt;
+&lt;p&gt;Nio&lt;/p&gt;
+&lt;p&gt;1、基于java
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Kafka学习笔记</title>
+    <link href="/2019/05/09/Kafka%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>/2019/05/09/Kafka学习笔记/</id>
+    <published>2019-05-09T02:41:22.000Z</published>
+    <updated>2019-05-09T02:41:42.574Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;kafka节点之间如何复制备份的？&lt;/li&gt;
+&lt;li&gt;kafka消息是否会丢失？为什么？&lt;/li&gt;
+&lt;li&gt;kafka最合理的配置是什么？&lt;/li&gt;
+&lt;li&gt;kafka的leader选举机制是什么？&lt;/li&gt;
+&lt;li&gt;kafka对硬件的配置有什么要求？&lt;/li&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>那些有趣的注释，有没有你曾用过的</title>
@@ -236,30 +317,6 @@
   </entry>
   
   <entry>
-    <title>Ubuntu 16.04 升级Python3.x</title>
-    <link href="/2019/04/26/Ubuntu%2016.04%20%E5%8D%87%E7%BA%A7Python3.x/"/>
-    <id>/2019/04/26/Ubuntu 16.04 升级Python3.x/</id>
-    <published>2019-04-26T09:29:22.000Z</published>
-    <updated>2019-04-26T10:26:16.606Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h2&gt;&lt;p&gt;有个项目需要Python3.5&lt;br&gt;我的服务器系统是Ubuntu 16.04
-        
-      
-    
-    </summary>
-    
-      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>安装Vue教程</title>
     <link href="/2019/04/26/%E5%AE%89%E8%A3%85Vue%E6%95%99%E7%A8%8B/"/>
     <id>/2019/04/26/安装Vue教程/</id>
@@ -276,6 +333,30 @@
 &lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;// 安装node.js，内含npm，Node.js官网：https://nodejs.org/en/ 。
 
 //
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 16.04 升级Python3.x</title>
+    <link href="/2019/04/26/Ubuntu%2016.04%20%E5%8D%87%E7%BA%A7Python3.x/"/>
+    <id>/2019/04/26/Ubuntu 16.04 升级Python3.x/</id>
+    <published>2019-04-26T09:29:22.000Z</published>
+    <updated>2019-04-26T10:26:16.606Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h2&gt;&lt;p&gt;有个项目需要Python3.5&lt;br&gt;我的服务器系统是Ubuntu 16.04
         
       
     
@@ -334,10 +415,10 @@
   
   <entry>
     <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura - 副本/</id>
+    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-04-26T06:39:26.988Z</updated>
+    <updated>2019-04-26T06:39:12.148Z</updated>
     
     <summary type="html">
     
@@ -356,10 +437,10 @@
   
   <entry>
     <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
+    <link href="/2018/12/12/Hexo-Theme-Sakura%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura - 副本/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-04-26T06:39:12.148Z</updated>
+    <updated>2019-04-26T06:39:26.988Z</updated>
     
     <summary type="html">
     
