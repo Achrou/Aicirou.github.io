@@ -317,30 +317,6 @@
   </entry>
   
   <entry>
-    <title>Ubuntu 16.04 升级Python3.x</title>
-    <link href="/2019/04/26/Ubuntu%2016.04%20%E5%8D%87%E7%BA%A7Python3.x/"/>
-    <id>/2019/04/26/Ubuntu 16.04 升级Python3.x/</id>
-    <published>2019-04-26T09:29:22.000Z</published>
-    <updated>2019-04-26T10:26:16.606Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h2&gt;&lt;p&gt;有个项目需要Python3.5&lt;br&gt;我的服务器系统是Ubuntu 16.04
-        
-      
-    
-    </summary>
-    
-      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>安装Vue教程</title>
     <link href="/2019/04/26/%E5%AE%89%E8%A3%85Vue%E6%95%99%E7%A8%8B/"/>
     <id>/2019/04/26/安装Vue教程/</id>
@@ -357,6 +333,30 @@
 &lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;// 安装node.js，内含npm，Node.js官网：https://nodejs.org/en/ 。
 
 //
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 16.04 升级Python3.x</title>
+    <link href="/2019/04/26/Ubuntu%2016.04%20%E5%8D%87%E7%BA%A7Python3.x/"/>
+    <id>/2019/04/26/Ubuntu 16.04 升级Python3.x/</id>
+    <published>2019-04-26T09:29:22.000Z</published>
+    <updated>2019-04-26T10:26:16.606Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h2&gt;&lt;p&gt;有个项目需要Python3.5&lt;br&gt;我的服务器系统是Ubuntu 16.04
         
       
     
@@ -415,10 +415,10 @@
   
   <entry>
     <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
+    <link href="/2018/12/12/Hexo-Theme-Sakura%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura - 副本/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-04-26T06:39:12.148Z</updated>
+    <updated>2019-04-26T06:39:26.988Z</updated>
     
     <summary type="html">
     
@@ -437,10 +437,10 @@
   
   <entry>
     <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura - 副本/</id>
+    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
+    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-04-26T06:39:26.988Z</updated>
+    <updated>2019-04-26T06:39:12.148Z</updated>
     
     <summary type="html">
     
