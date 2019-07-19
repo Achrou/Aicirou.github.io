@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-06-26T05:28:12.816Z</updated>
+  <updated>2019-07-19T09:37:09.408Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>错误码设计方案</title>
+    <link href="/2019/07/19/%E9%94%99%E8%AF%AF%E7%A0%81%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/"/>
+    <id>/2019/07/19/错误码设计方案/</id>
+    <published>2019-07-19T09:37:18.000Z</published>
+    <updated>2019-07-19T09:37:09.408Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;纯错误码-ABBBBCCCC&quot;&gt;&lt;a href=&quot;#纯错误码-ABBBBCCCC&quot; class=&quot;headerlink&quot; title=&quot;#纯错误码:ABBBBCCCC&quot;&gt;&lt;/a&gt;#纯错误码:ABBBBCCCC&lt;/h2&gt;&lt;ul&gt;
+&lt;li
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用Spring cloud oauth2时一些问题汇总</title>
+    <link href="/2019/07/05/%E4%BD%BF%E7%94%A8Spring-cloud-oauth2%E6%97%B6%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <id>/2019/07/05/使用Spring-cloud-oauth2时一些问题汇总/</id>
+    <published>2019-07-05T14:19:37.000Z</published>
+    <updated>2019-07-08T01:36:32.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一开始使用client模式在浏览器进行访问（GET）&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记一次Data truncation: Out of range value for column</title>
+    <link href="/2019/07/01/%E8%AE%B0%E4%B8%80%E6%AC%A1Data%20truncation:%20Out%20of%20range%20value%20for%20column/"/>
+    <id>/2019/07/01/记一次Data truncation: Out of range value for column/</id>
+    <published>2019-07-01T10:27:18.000Z</published>
+    <updated>2019-07-08T01:36:32.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天客户方在使用程序时保存报错，根据他提供的信息来讲始终只有那一条数据保存不进去，具体报的什么错不管是日志还是前端展示上都没有明确体现（这款程序很老先不说，代码写的也贼乱，跑这个项目mac散热飞起…）。所以只能通过数据和调试程序寻找原因了。。。&lt;/p&gt;
+&lt;p&gt;1、查询数据库
+        
+      
+    
+    </summary>
+    
+      <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jvm学习笔记-类加载机制</title>
+    <link href="/2019/06/30/jvm/jvm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/"/>
+    <id>/2019/06/30/jvm/jvm学习笔记-类加载机制/</id>
+    <published>2019-06-30T04:55:17.000Z</published>
+    <updated>2019-07-08T01:36:32.867Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;加载、&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="jvm学习笔记" scheme="/categories/jvm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>jvm学习笔记(一)</title>
@@ -46,7 +147,7 @@
     <link href="/2019/06/06/netty/Netty%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
     <id>/2019/06/06/netty/Netty学习一/</id>
     <published>2019-06-06T06:40:16.000Z</published>
-    <updated>2019-06-06T07:24:52.944Z</updated>
+    <updated>2019-07-02T01:58:50.278Z</updated>
     
     <summary type="html">
     
@@ -410,50 +511,6 @@
     
       <category term="自学教程" scheme="/categories/%E8%87%AA%E5%AD%A6%E6%95%99%E7%A8%8B/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura - 副本/</id>
-    <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-04-26T06:39:26.988Z</updated>
-    
-    <summary type="html">
-    
-      hexo-sakura主题使用教程
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>/2018/12/12/Hexo-Theme-Sakura/</id>
-    <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-04-26T06:39:12.148Z</updated>
-    
-    <summary type="html">
-    
-      hexo-sakura主题使用教程
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
