@@ -425,10 +425,10 @@
 <p>出现了 “Bad client credentials” 错误，直观感觉是自己的client_id和client_secret填写的和配置的不匹配，然后检查了下这两个参数发现并没有错。那么这个猜测先挂起，先去控制台看看有没有什么可靠信息供我们参考。</p>
 <p><img src="https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/YP6fUqzMKEbXRWxC4A35l5ZMGNHkttpTJmUFlcDEQEs!/r/dFIBAAAAAAAAnull&amp;bo=MAe.ATAHvgEDCSw!&amp;rf=photolist&amp;t=5_yake_qzoneimgout.png" alt></p>
 <p><img src="https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/8ykeQAyWunOmb83QwXIp*BNws9gFklyiorMSFmXUe94!/r/dAgBAAAAAAAAnull&amp;bo=IAf8ACAH*AADCSw!&amp;rf=photolist&amp;t=5_yake_qzoneimgout.png" alt></p>
-<p>果然我每发一次请求都会出现一次”Encoded password does not look like BCrypt”，意思是说我们的密码加密类型不是BCrypt。然后百度下这个问题，大部分都是说要配置一个BCryptPasswordEncoder类型的Bean，但是实际上我是配了的。既然这个走不通，我们再回过头结合一下上面挂起的问题，可以确定以下几点：</p>
+<p>果然我每发一次请求都会出现一次”Encoded password does not look like BCrypt”，意思是说我们的密码加密类型不是BCrypt。然后百度下这个问题，大部分都是说要配置一个BCryptPasswordEncoder类型的Bean，但是实际上我是配了的。既然这个走不通，我们再回过头结合一下上面挂起的猜测，可以确定以下几点：</p>
 <p>1、client_id、client_secret 存在问题</p>
 <p>2、密码加密类型不对</p>
-<p>大家都知道client模式的client_id、client_secret其实就是对应的用户名和密码，这样我们就可以确定问题了：client_secret加密类型不正确。</p>
+<p>大家都知道client模式的client_id、client_secret其实就是对应的用户名和密码，这样我们就可以确定问题了：因为加密类型不正确/没有加密 导致client_secret不匹配。</p>
 <p>找到设置client_secret值的地方</p>
 <p><img src="https://r.photo.store.qq.com/psb?/V115Q75b3Bxa2B/cjNopvbKJhv4Ceg6J0iXN5GRMGdLHY96jmRyX2QXXpI!/r/dLgAAAAAAAAAnull&amp;bo=IAd2AQAAAAADB3I!&amp;rf=photolist&amp;t=5_yake_qzoneimgout.png" alt></p>
 <p>果然我们的secret并没加密，查看官方文档得知是因为springsecurity在最新版本升级后,默认把之前的明文密码方式给去掉了<a href="https://spring.io/blog/2017/11/01/spring-security-5-0-0-rc1-released#password-storage-updated" target="_blank" rel="noopener">官方文档说明</a>。</p>
