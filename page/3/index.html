@@ -406,6 +406,129 @@
 <article class="post post-list-thumb post-list-thumb-left" itemscope itemtype="http://schema.org/BlogPosting">
 
   <div class="post-thumb">
+    <a href="/2019/04/26/关于Java多线程的理解/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2019-4-26 17:04</div>
+      <a href="/2019/04/26/关于Java多线程的理解/" class="post-title">
+        <h3>关于Java多线程的理解</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/自学教程/">自学教程</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <!--<p><p>首先说到线程就要提一下进程：</p>
+<p>一个程序的执行周期就是一个进程 。</p>
+<p>不管有多少块CPU，最后都是一块空间进行程序 处理</p>
+<p>在单cpu的情况下 多个程序同时执行时就需要对源进行轮番使用就</p>
+<p><img src="http://b.jsonpop.cn/wp-content/uploads/2018/11/19455539a000209163.png" alt></p>
+<p>在传统进程中 在一个程序执行的时候所有的资源只为这一个程序服务</p>
+<p>而在现阶段 还是只有一块资源而这一块资源就要被程序轮番占用</p>
+<p>一块资源在同一时间段内可能会有多个进程交替执行，但是在某一时间点上只能有一个进程在执行。</p>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>线程是在进程的基础上进一步划分，也就是说线程是比进程更小得执行单位。</p>
+<p><img src="https://edu.aliyun.com/files/course/2018/01-17/194713172484278756.png" alt></p>
+<p>在服务器应用中 web服务就相当于一个进程，而不同用户访问这个进程就是一个线程，线程拥有自己的对象，而这些线程都是指向同一块堆内存。</p>
+<p>并发就是访问的进程量爆高，最直白的问题就是服务器的内存不够用了，无法创建新的用户（线程）。</p>
+</p>-->
+        <div class="post-bottom">
+          <a href="/2019/04/26/关于Java多线程的理解/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article class="post post-list-thumb" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2019/04/25/使用微博相册做个人网站CDN图床/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2019-4-25 17:04</div>
+      <a href="/2019/04/25/使用微博相册做个人网站CDN图床/" class="post-title">
+        <h3>使用微博相册做个人网站CDN图床</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/自学教程/">自学教程</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <!--<p><h2 id="序言"><a href="#序言" class="headerlink" title="#序言"></a>#序言</h2><p>今天博主终于从wordpress转到hexo来了，至于为什么要转其实我也不想实在是被wp给逼的！<br>在wp时文章中图片用的是七牛云，相较于其他云存储来说七牛云算是比较够意识的，新注册用户实名认证后送10G免费存储空间，虽然用户上来之后测试域名开始限时，CDN开始收费0.15 元/GB ，但是还是挺划算的🙃</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="#正文"></a>#正文</h2><p>七牛云打算放一些重要文件备份，在搭建hexo时就没有选择七牛云做图床。<br>现在免费可靠的可用于图床的存储空间有：github、gitee、coding、新浪相册<br>通过下面这个表格对比下</p>
+<table>
+<thead>
+<tr>
+<th>存储空间</th>
+<th>大小</th>
+<th>CDN配合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>github</td>
+<td>超过1G后官方会发邮件通知</td>
+<td>jsdelivr</td>
+</tr>
+<tr>
+<td>gitee</td>
+<td>私有仓库免费5G 免费仓库</td>
+<td>无</td>
+</tr>
+<tr>
+<td>coding</td>
+<td>5 个项目数、128M 仓库容量</td>
+<td>无</td>
+</tr>
+<tr>
+<td>新浪相册</td>
+<td>单目录126个文件、大小不限</td>
+<td>新浪CDN</td>
+</tr>
+</tbody>
+</table>
+</p>-->
+        <div class="post-bottom">
+          <a href="/2019/04/25/使用微博相册做个人网站CDN图床/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article class="post post-list-thumb post-list-thumb-left" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="post-thumb">
     <a href="/2018/12/12/Hexo-Theme-Sakura - 副本/">
       <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://wx4.sinaimg.cn/large/0069lHOigy1g2f1szrfimj30sg0g0gmx.jpg">
     </a>
